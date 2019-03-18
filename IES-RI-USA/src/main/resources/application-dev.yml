@@ -1,0 +1,64 @@
+
+ies:
+ properties:
+   message: Welcome to IES- Dev Environment
+   
+   accSuccess: Registration completed Successfully
+   accFailure: Registration Failed
+   url: http://localhost:9090/IES/accReg
+   reg_sub: IES Registration Account Details
+   regEmailFileName: Registration_Email_Template.txt
+   accActivationEmailFileName: Account_Activation_Template.txt
+   
+   accActivateEmailSubject: Your RI IES Account Activated
+   accDeActivationEmailFileName: Account_De_Activation_Template.txt
+   accDeActiveEmailSubject: Your RI IES Account De-Activated
+   
+   deActivateSuccessMsg:  Account  De-Activated Succesfully 
+   deActivateFailureMsg:  Account De-Activation Failed 
+   
+   activateSuccessMsg:  Account  Activated Succesfully 
+   activateFailureMsg:  Account Activation Failed 
+   
+   planRegSuccessMsg: Plan Created Successfully
+   planRegFailureMsg: Plan Creation failed
+   
+   planDeActivateSuccessMsg: Plan De-Activated SuccessFully
+   planDeActivateFailureMsg: Plan De-Activated Failed
+   
+   planActivateSuccessMsg: Plan Activated SuccessFully
+   planActivateFailureMsg: Plan Activation Failed
+   
+# server Port number
+server:
+   port: 9090
+   
+#Jdbc Properties cfgs
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: IES_DEV
+    password: IES_DEV
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+#Spring Hibernate Properties cfgs
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+              
+    show-sql: true
+    
+#logging properties  
+logging:
+  level:
+    root: INFO
+   # org.springframework.web: ERROR
+    com.usa.ri.gov.ies.admin: DEBUG
+   # org.hibernate: ERROR
+  file: IES-DEV-Logs.log     
+    
+       

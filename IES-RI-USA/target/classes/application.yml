@@ -1,0 +1,29 @@
+server:
+   servlet:
+    context-path: /IES
+#Basic properties     
+
+   
+
+spring:
+  profiles:
+    active: dev
+  mvc:
+   view:
+      prefix: /views/
+      suffix: .jsp
+  mail:
+    host: smtp.gmail.com  
+    port: 587
+    username: solanki.omprakash24@gmail.com    
+    password: Google@98278259
+    properties: 
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smpt.auth: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+      
+      
+    
